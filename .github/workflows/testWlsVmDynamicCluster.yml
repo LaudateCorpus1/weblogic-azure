@@ -250,7 +250,7 @@ jobs:
           echo "artifactName=${artifactName}" >> $GITHUB_ENV
           echo "##[set-output name=artifactName;]${artifactName}"
       - name: Download artifact for deployment
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{steps.artifact_file.outputs.artifactName}}
       - uses: azure/login@v1
@@ -556,7 +556,7 @@ jobs:
           echo "artifactNameOfAddnode=${artifactNameOfAddnode}" >> $GITHUB_ENV
           echo "##[set-output name=artifactNameOfAddnode;]${artifactNameOfAddnode}"
       - name: Download artifact for deployment
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{steps.artifact_file_addnode.outputs.artifactNameOfAddnode}}
 
@@ -612,7 +612,7 @@ jobs:
           echo "artifactNameOfAddnodeCo=${artifactNameOfAddnodeCo}" >> $GITHUB_ENV
           echo "##[set-output name=artifactNameOfAddnodeCo;]${artifactNameOfAddnodeCo}"
       - name: Download artifact for deployment
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{steps.artifact_file_addnode_coherence.outputs.artifactNameOfAddnodeCo}}
 
@@ -665,7 +665,7 @@ jobs:
           echo "artifactNameOfDeleteNode=${artifactNameOfDeleteNode}" >> $GITHUB_ENV
           echo "##[set-output name=artifactNameOfDeleteNode;]${artifactNameOfDeleteNode}"
       - name: Download artifact for deployment
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{steps.artifact_file_deletenode.outputs.artifactNameOfDeleteNode}}
       - name: Delete nodes from existing cluster
