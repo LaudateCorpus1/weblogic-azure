@@ -223,7 +223,7 @@ jobs:
                 echo "artifactName=${artifactName}" >> $GITHUB_ENV
                 echo "##[set-output name=artifactName;]${artifactName}"
             - name: Download artifact for deployment
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: ${{steps.artifact_file.outputs.artifactName}}
             - uses: azure/login@v1
